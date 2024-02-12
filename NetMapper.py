@@ -1,3 +1,7 @@
+# This script defines the network topology using a directed graph and adds nodes and edges to represent the devices and their connections. 
+# It then uses the Graphviz layout engine to calculate the positions of the nodes in the graph. 
+# The script also sets the color and size of the nodes based on their type, such as routers, switches, servers, and database servers. Finally, the script displays the graph with a title and axis labels using Matplotlib.
+
 import networkx as nx
 from networkx.drawing.nx_agraph import graphviz_layout
 import matplotlib.pyplot as plt
