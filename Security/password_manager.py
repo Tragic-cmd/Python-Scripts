@@ -1,3 +1,5 @@
+# A work in progress.
+
 import os
 import getpass
 import bcrypt
