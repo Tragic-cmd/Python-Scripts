@@ -1,8 +1,10 @@
+# the argparse library is used to parse command line arguments for the starting and ending IP addresses and port numbers.
 import argparse
 import socket
 import threading
 import time
 
+# The scan_port function is used to scan a single port on a given IP address.
 def scan_port(ip, port):
     try:
         sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
@@ -14,11 +16,13 @@ def scan_port(ip, port):
     except:
         pass
 
+# The scan_ip function is used to scan a range of ports on a given IP address.
 def scan_ip(ip, start_port, end_port):
     print(f'Scanning {ip}...')
     for port in range(start_port, end_port + 1):
         scan_port(ip, port)
 
+# The main function creates a thread for each IP address in the specified range and starts them. 
 def main():
     parser = argparse.ArgumentParser(description='Scan a range of IP addresses for open ports.')
     parser.add_argument('start_ip', type=int, help='the starting IP address')
@@ -36,7 +40,8 @@ def main():
 
     for t in threads:
         t.join()
-
+        
+# The script measures the elapsed time for the scanning process.
 if __name__ == '__main__':
     start_time = time.time()
     main()
