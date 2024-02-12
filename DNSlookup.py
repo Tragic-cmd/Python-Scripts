@@ -1,3 +1,5 @@
+# The script allows the user to input the number of hostnames they want to lookup, and then prompts them to enter each hostname one at a time. It then iterates through the list of hostnames and performs a DNS lookup for each one.
+# I've also added error handling for cases where a hostname cannot be resolved. If the socket.gethostbyname or socket.gethostbyaddr functions raise a socket.gaierror exception, the script will print an error message indicating that the hostname could not be resolved, along with the exception message.
 import socket
 
 def dns_lookup(host):
@@ -17,3 +19,5 @@ if __name__ == '__main__':
     
     for host in hosts:
         dns_lookup(host)
+
+# UNFINISHED
