@@ -3,6 +3,7 @@
 import socket
 import subprocess
 
+# You must change the listening IP and port to match that of the server. 
 HOST = '0.0.0.0'
 PORT = 87
 
