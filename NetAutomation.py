@@ -1,3 +1,6 @@
+# This script defines a list of devices to be configured, along with the necessary connection information such as IP address, username, and password. It also defines a list of configuration commands to be sent to the devices.
+# The script then loops through each device in the list, connects to it using Netmiko, sends the configuration commands, prints the output of the commands, and disconnects from the device.
+
 import netmiko
 import logging
 
