@@ -1,3 +1,6 @@
+# This script will iterate through the range of IP addresses specified by start_ip and end_ip, and for each IP address, it will send a ping request with a timeout of 1 second using the ping3.ping() function. 
+# If a response is received within the timeout period, the script will print a message indicating that the device at that IP address is online.
+
 import ping3
 
 # Set up the IP address range to scan
