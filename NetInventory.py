@@ -1,3 +1,5 @@
+# This script first uses Nmap to scan the network for live hosts and then uses Netdisco to obtain information about the devices. The script also includes error handling to skip hosts that cannot be scanned with Netdisco.
+
 import nmap
 import netdisco
 
