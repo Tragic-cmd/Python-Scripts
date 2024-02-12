@@ -1,3 +1,5 @@
+# The objective of this script is to capture and analyze network traffic to identify potential security threats, network congestion, and other performance issues.
+
 import pyshark
 from scapy.all import *
 
